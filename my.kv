@@ -1,0 +1,59 @@
+
+
+<Container>:
+	rows: 3
+	padding: 10
+	
+	
+	label_widget: label
+	label2_widget: label2
+	
+		
+	Label:
+		id: label
+		text: "Good day!\nДля старта жмите\n'Следующая'"
+		font_size: 38
+		#color: 'green'
+		halign: 'center'
+		valign: 'top'
+		
+	Label:
+		id: label2
+		text: ''
+		font_size: 38
+		#color: 'magenta'
+		halign: 'center'
+	
+		
+	
+	FloatLayout:
+		Button:
+			background_color: [0.5, 0.5, 1, 1]
+			size_hint: 0.5, 0.7
+			pos_hint: {'center_x': 0.25, 'y': 0.2}
+			text: 'Перевод'
+			font_size: 30
+			
+			on_release:
+				root.change_text2()
+		
+		Button:
+			background_color: [0.5, 0.5, 1, 1]
+			size_hint: 0.5, 0.7
+			pos_hint: {'center_x': 0.75, 'y': 0.2}
+			text: 'Следующая'
+			font_size: 30
+			
+			on_release:
+				root.change_text()
+				
+		Button:
+			background_color: [0.5, 0.6, 1, 1]
+			size_hint: 1, 0.3
+			pos_hint: {'center_x': 0.5, 'y': 0.9}
+			text: 'Исключить фразу'
+			font_size: 26
+			
+			on_release:
+				root.fuck_kley()	
+				
